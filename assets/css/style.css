@@ -2,12 +2,12 @@
 
 * {
     margin: 0;
-    border: 0;
-    padding: none;
+    padding: 0;
+    border: none;
 }
 
 body {
-    font-family: "Lato";
+    font-family: Lato, sans-serif;
     font-weight: 300;
     color: #3a3a3a;
 }
@@ -16,14 +16,20 @@ body {
 
 h1, h2 {
     font-family: Oswald, sans-serif;
-    text-transform: capitalize;
+    text-transform: uppercase;
     letter-spacing: 4px
     color: #252525;
+    /*
+    position: absolute;
+    */
 }
 
 #logo {
     float: left;
     font-size: 280%;
+    /*
+    position: absolute;
+    */
 }
 
 /*navigation links*/
@@ -31,8 +37,6 @@ h1, h2 {
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
-    display: flex;
-    flex-direction: row-reverse;
 }
 
 #menu, #logo {
@@ -48,6 +52,7 @@ h1, h2 {
 #menu a {
     text-decoration: none;
     color: inherit;
+    
 }
 
 #menu a:hover {
@@ -57,6 +62,8 @@ h1, h2 {
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
+
+/* hero image */
 
 hero-outer {
     height: 600px;
@@ -68,6 +75,10 @@ hero-outer {
     height: 600px;
     width: 100%;
     background: url(../images/hero-image.webp) no-repeat center center;
+    
+    position: relative;
+    
+    z-index: -2;
 
     /* animates zoom effect on loading page */
     animation-name: hero-zoom;
